@@ -13,29 +13,28 @@ import Footer from './footer';
 
 const Home = () => {
 	return (
-		<div className="wrapper">
-			<Navbar
-				name='Mau!'
-				who={linkObj.who}
-				are={linkObj.are}
-				you={linkObj.you}
-				tell={linkObj.tell}
-			/>
-			<Jumbotron
-				title={jumboObj.title}
-				description={jumboObj.description}
-				subtext={jumboObj.subtext}
-				buttonURL={jumboObj.buttonURL}
-				buttonLabel={jumboObj.buttonLabel}
-			/>
-			<div className="d-flex justify-content-center px-2">
-				<Card
-					img={cardOne.img}
-					title={cardOne.title}
-					description={cardOne.description}
-					buttonURL={cardOne.buttonURL}
-					buttonLabel={cardOne.buttonLabel}
-				/>
+		<div className="container wrapper">
+			<div className="row">
+				<div className="col-12">
+					<Navbar
+						name='Mau!'
+						who={linkObj.who}
+						are={linkObj.are}
+						you={linkObj.you}
+						tell={linkObj.tell}
+					/>
+				</div>
+				<div className="col-12">
+					<Jumbotron
+						title={jumboObj.title}
+						description={jumboObj.description}
+						subtext={jumboObj.subtext}
+						buttonURL={jumboObj.buttonURL}
+						buttonLabel={jumboObj.buttonLabel}
+					/>
+				</div>
+			</div>
+			<div className="row">
 				<Card
 					img={cardFour.img}
 					title={cardFour.title}
@@ -57,6 +56,16 @@ const Home = () => {
 					buttonURL={cardFive.buttonURL}
 					buttonLabel={cardFive.buttonLabel}
 				/>
+			</div>
+			<div className="row justify-content-center">
+				<Card
+					img={cardOne.img}
+					title={cardOne.title}
+					description={cardOne.description}
+					buttonURL={cardOne.buttonURL}
+					buttonLabel={cardOne.buttonLabel}
+				/>
+
 				<Card
 					img={cardThree.img}
 					title={cardThree.title}
@@ -66,9 +75,27 @@ const Home = () => {
 				/>
 			</div>
 			<Footer />
-
 		</div>
 	);
 };
 
 export default Home;
+
+/*
+<Card
+img={cardOne.img}
+title={cardOne.title}
+description={cardOne.description}
+buttonURL={cardOne.buttonURL}
+buttonLabel={cardOne.buttonLabel}
+/>
+
+<Card
+img={cardThree.img}
+title={cardThree.title}
+description={cardThree.description}
+buttonURL={cardThree.buttonURL}
+buttonLabel={cardThree.buttonLabel}
+/>
+
+*/
